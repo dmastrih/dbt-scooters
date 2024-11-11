@@ -1,17 +1,17 @@
-Welcome to your new dbt project!
+## Установите dbt и адаптер postgres:
+   
+```bash
+pip install dbt dbt-postgres
+```
 
-### Using the starter project
+## Основные команды dbt
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
-
-
+- `dbt debug` - проверка подключения к хранилищу данных (проверка профиля)
+- `dbt parse` - парсинг файлов проекта (проверка корректности)
+- `dbt compile` - компилирует dbt-модели и создает SQL-файлы
+- `dbt run` - материализация моделей в таблицы и представления
+- `dbt test` - запускает тесты для проверки качества данных
+- `dbt seed` - загружает данные в таблицы из CSV-файлов
+- `dbt build` - основная команда, комбинирует run, test и seed
+- `dbt docs generate` - генерирует документацию проекта
+- `dbt docs serve` - запускает локальный сервер для просмотра документации
